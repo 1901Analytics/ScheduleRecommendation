@@ -6,8 +6,7 @@ import datetime
 st.set_page_config(layout = 'wide')
 
 # use a temporary local file path until this is uploaded to the server
-file_path = '/Volumes/StarkMaster/MTSU_DSI/Motley Project/'
-data = pd.read_csv(file_path + 'summaryChairsBasic.csv')
+data = pd.read_csv('summaryChairsBasic.csv')
 data['Date'] = pd.to_datetime(data['Start Time'], utc = True)
 data['Date'] = data['Date'].dt.date
 
